@@ -49,7 +49,7 @@ D. the program will throw a runtime exception of AbstractClassInstantiationExcep
 
 
 3.
-Consider the following program:
+Consider the following program
  
 class Base {}
 class DeriOne extends Base {}
