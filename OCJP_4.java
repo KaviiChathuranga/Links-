@@ -436,7 +436,7 @@ A.  this program will result in a compiler error: redundant method definition fo
 function foo
 B.  this program will result in a compiler error in Multipleinheritance class:
 ambiguous call to function foo
-C.  the program prints: derivedinterface’s foo
+C.  the program prints: derivedinterface's foo
 D.  the program prints: anotherinterface's foo
 
 
