@@ -752,44 +752,6 @@ E. Garbage collection might or might not run.
 F. Garbage collection is guaranteed not to run.
 G. The code does not compile.
  
- 
-21.  What does the following code output?
- 
-  1: public class Salmon {
-  2:  int count;
-  3:  public void Salmon() {
-  4:    count = 4;
-  5:  }
-  6: public static void main(String[] args) {
-  7:  Salmon s = new Salmon();
-  8:  System.out.println(s.count);
-  9: } }
- 
-A. 0
-B. 4
-C.  Compilation fails on line 3.
-D.  Compilation fails on line 4.
-E.  Compilation fails on line 7.
-F.  Compilation fails on line 8.
- 
-22.  Which of the following are true statements? (Choose all that apply)
- 
-A.  Java allows operator overloading.
-B.  Java code compiled on Windows can run on Linux.
-C.  Java has pointers to specific locations in memory.
-D.  Java is a procedural language.
-E.  Java is an object-oriented language.
-F.  Java is a functional programming language.
- 
-23.  Which of the following are true? (Choose all that apply)
- 
-A. javac compiles a .class file into a .java file.
-B. javac compiles a .java file into a .bytecode file.
-C. javac compiles a .java file into a .class file.
-D. Java takes the name of the class as a parameter.
-E. Java takes the name of the .bytecode file as a parameter.
-F. Java takes the name of the .class  file as a parameter.
-
 
 Answers
 
@@ -813,12 +775,6 @@ A, E.
 C, D, E
 B, D.
 B, E.
-A
-B, E.
-C, D
-
-
-
 
 
 
