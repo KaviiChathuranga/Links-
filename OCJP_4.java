@@ -2,24 +2,25 @@
 CHAPTER 02
  
 1.
-What will be the output of this program?
-class Color {
- int red, green, blue;
- void Color() {
-  red = 10;
-  green = 10;
-  blue = 10;
- }
- void printColor() {
-  System.out.println("red: " + red + " green: " + green + " blue: " +
-   blue);
- }
- public static void main(String[] args) {
-  Color color = new Color();
-  color.printColor();
- }
-}
  
+  What will be the output of this program?
+  class Color {
+   int red, green, blue;
+   void Color() {
+    red = 10;
+    green = 10;
+    blue = 10;
+   }
+   void printColor() {
+    System.out.println("red: " + red + " green: " + green + " blue: " +
+     blue);
+   }
+   public static void main(String[] args) {
+    Color color = new Color();
+    color.printColor();
+   }
+  }
+
 a.Compiler error: no constructor provided for the class
 B.Compiles fine, and when run, it prints the following: red: 0 green: 0 blue: 0
 C.Compiles fine, and when run, it prints the following: red: 10 green: 10 blue: 10
@@ -27,18 +28,19 @@ D.Compiles fine, and when run, crashes by throwing NullPointerException
 
 
 2.
-Consider the following program and predict the behavior of this program:
-class Base {
- public void print() {
-  System.out.println("Base:print");
- }
-}
-abstract class Test extends Base { //#1
- public static void main(String[] args) {
-  Base obj = new Base();
-  obj.print(); //#2
- }
-}
+
+  Consider the following program and predict the behavior of this program:
+  class Base {
+   public void print() {
+    System.out.println("Base:print");
+   }
+  }
+  abstract class Test extends Base { //#1
+   public static void main(String[] args) {
+    Base obj = new Base();
+    obj.print(); //#2
+   }
+  }
  
 a. Compiler error “an abstract class cannot extend from a concrete class” at
 statement marked with comment #1
@@ -51,17 +53,17 @@ D. the program will throw a runtime exception of AbstractClassInstantiationExcep
 3.
 Consider the following program
  
-class Base {}
-class DeriOne extends Base {}
-class DeriTwo extends Base {}
-class ArrayStore {
- public static void main(String[] args) {
-  Base[] baseArr = new DeriOne[3];
-  baseArr[0] = new DeriOne();
-  baseArr[2] = new DeriTwo();
-  System.out.println(baseArr.length);
- }
-}
+  class Base {}
+  class DeriOne extends Base {}
+  class DeriTwo extends Base {}
+  class ArrayStore {
+   public static void main(String[] args) {
+    Base[] baseArr = new DeriOne[3];
+    baseArr[0] = new DeriOne();
+    baseArr[2] = new DeriTwo();
+    System.out.println(baseArr.length);
+   }
+  }
  
 Which one of the following options correctly describes the behavior of this program?
  
@@ -73,26 +75,27 @@ D.this program throws an ArrayIndexOutOfBoundsException
 
 4.
 Determine the output of this program:
-class Color {
- int red, green, blue;
- Color() {
-  Color(10, 10, 10);
- }
- Color(int r, int g, int b) {
-  red = r;
-  green = g;
-  blue = b;
- }
- void printColor() {
-  System.out.println("red: " + red + " green: " + green + " blue: " +
-   blue);
- }
- public static void main(String[] args) {
-  Color color = new Color();
-  color.printColor();
- }
-}
- 
+
+  class Color {
+   int red, green, blue;
+   Color() {
+    Color(10, 10, 10);
+   }
+   Color(int r, int g, int b) {
+    red = r;
+    green = g;
+    blue = b;
+   }
+   void printColor() {
+    System.out.println("red: " + red + " green: " + green + " blue: " +
+     blue);
+   }
+   public static void main(String[] args) {
+    Color color = new Color();
+    color.printColor();
+   }
+  }
+
 a. Compiler error: cannot find symbol
 B.Compiles without errors, and when run, it prints: red: 0 green: 0 blue: 0
 C.Compiles without errors, and when run, it prints: red: 10 green: 10 blue: 10
@@ -102,11 +105,11 @@ D.Compiles without errors, and when run, crashes by throwing NullPointerExceptio
  
 5. Choose the correct option based on this code segment:
  
-class Rectangle { }
-class ColoredRectangle extends Rectangle { }
-class RoundedRectangle extends Rectangle { }
-class ColoredRoundedRectangle extends ColoredRectangle, RoundedRectangle { }
- 
+  class Rectangle { }
+  class ColoredRectangle extends Rectangle { }
+  class RoundedRectangle extends Rectangle { }
+  class ColoredRoundedRectangle extends ColoredRectangle, RoundedRectangle { }
+
 Choose an appropriate option:
  
 a.Compiler error: '{' expected cannot extend two classes
@@ -117,21 +120,21 @@ D.Compiles fine, and when run, crashes with the exception EmptyClassDefinitionEr
 
 6. Consider the following program and determine the output:
  
-class Test {
- public void print(Integer i) {
-  System.out.println("Integer");
- }
- public void print(int i) {
-  System.out.println("int");
- }
- public void print(long i) {
-  System.out.println("long");
- }
- public static void main(String args[]) {
-  Test test = new Test();
-  test.print(10);
- }
-}
+  class Test {
+   public void print(Integer i) {
+    System.out.println("Integer");
+   }
+   public void print(int i) {
+    System.out.println("int");
+   }
+   public void print(long i) {
+    System.out.println("long");
+   }
+   public static void main(String args[]) {
+    Test test = new Test();
+    test.print(10);
+   }
+  }
  
 a.the program results in a compiler error (“ambiguous overload”)
 B.long
@@ -140,20 +143,21 @@ D.int
 
 
 7. Consider the following code and choose the right option for the word 
-<access-modifier>:
-// Shape.java
-public class Shape {
- protected void display() {
-  System.out.println("Display-base");
- }
-}
-// Circle.java
-public class Circle extends Shape {
- <access - modifier > void display() {
-  System.out.println("Display-derived");
- }
-}
- 
+
+  <access-modifier>:
+  // Shape.java
+  public class Shape {
+   protected void display() {
+    System.out.println("Display-base");
+   }
+  }
+  // Circle.java
+  public class Circle extends Shape {
+   <access - modifier > void display() {
+    System.out.println("Display-derived");
+   }
+  }
+
 a.Only protected can be used
 B.public and protected both can be used
 C.public, protected, and private can be used
@@ -171,23 +175,23 @@ E. wait() method
 
 9. Choose the correct option based on the following program:
  
-class Color {
- int red, green, blue;
- Color() {
-  this(10, 10, 10);
- }
- Color(int r, int g, int b) {
-  red = r;
-  green = g;
-  blue = b;
- }
- public String toString() {
-  return "The color is: " + red + green + blue;
- }
- public static void main(String[] args) {
-  System.out.println(new Color());
- }
-}
+  class Color {
+   int red, green, blue;
+   Color() {
+    this(10, 10, 10);
+   }
+   Color(int r, int g, int b) {
+    red = r;
+    green = g;
+    blue = b;
+   }
+   public String toString() {
+    return "The color is: " + red + green + blue;
+   }
+   public static void main(String[] args) {
+    System.out.println(new Color());
+   }
+  }
  
 a. Compiler error: incompatible types
 B. Compiles fine, and when run, it prints the following: the color is: 30
@@ -196,25 +200,25 @@ D. Compiles fine, and when run, it prints the following: the color is: red green
 
 10. Choose the best option based on the following program:
  
-class Color {
- int red, green, blue;
- Color() {
-  this(10, 10, 10);
- }
- Color(int r, int g, int b) {
-  red = r;
-  green = g;
-  blue = b;
- }
- String toString() {
-  return "The color is: " + " red = " + red + " green = " + green + "
-  blue = " + blue;
- }
- public static void main(String[] args) {
-  // implicitly invoke toString method
-  System.out.println(new Color());
- }
-}
+  class Color {
+   int red, green, blue;
+   Color() {
+    this(10, 10, 10);
+   }
+   Color(int r, int g, int b) {
+    red = r;
+    green = g;
+    blue = b;
+   }
+   String toString() {
+    return "The color is: " + " red = " + red + " green = " + green + "
+    blue = " + blue;
+   }
+   public static void main(String[] args) {
+    // implicitly invoke toString method
+    System.out.println(new Color());
+   }
+  }
  
 a. Compiler error: attempting to assign weaker access privileges; toString was
 public in Object
@@ -261,21 +265,21 @@ D.  no compiler error: this class definition is fine and will compile successful
 
 3.Choose the best option based on this program:
  
-class Shape {
- public Shape() {
-  System.out.println("Shape constructor");
- }
- public class Color {
-  public Color() {
-   System.out.println("Color constructor");
+  class Shape {
+   public Shape() {
+    System.out.println("Shape constructor");
+   }
+   public class Color {
+    public Color() {
+     System.out.println("Color constructor");
+    }
+   }
   }
- }
-}
-class TestColor {
- public static void main(String[] args) {
-  Shape.Color black = new Shape().Color(); // #1
- }
-}
+  class TestColor {
+   public static void main(String[] args) {
+    Shape.Color black = new Shape().Color(); // #1
+   }
+  }
  
 A. Compiler error: the method Color() is undefined for the type shape
 B.Compiler error: invalid inner class
@@ -285,26 +289,26 @@ D. Works fine: Color constructor, shape constructor
 
 4. Choose the best option based on this program:
  
-class Shape {
- private boolean isDisplayed;
- protected int canvasID;
- public Shape() {
-  isDisplayed = false;
-  canvasID = 0;
- }
- public class Color {
-  public void display() {
-   System.out.println("isDisplayed: " + isDisplayed);
-   System.out.println("canvasID: " + canvasID);
+  class Shape {
+   private boolean isDisplayed;
+   protected int canvasID;
+   public Shape() {
+    isDisplayed = false;
+    canvasID = 0;
+   }
+   public class Color {
+    public void display() {
+     System.out.println("isDisplayed: " + isDisplayed);
+     System.out.println("canvasID: " + canvasID);
+    }
+   }
   }
- }
-}
-class TestColor {
- public static void main(String[] args) {
-  Shape.Color black = new Shape().new Color();
-  black.display();
- }
-}
+  class TestColor {
+   public static void main(String[] args) {
+    Shape.Color black = new Shape().new Color();
+    black.display();
+   }
+  }
  
 A. Compiler error: an inner class can only access public members of the 
 outer class
@@ -317,22 +321,22 @@ F. Compiles fine but crashes with a runtime exception
 
 
 5. determine the behavior of this program:
- 
-public class EnumTest {
- PrinterType printerType;
- enum PrinterType {
-  INKJET,
-  DOTMATRIX,
-  LASER
- };
- public EnumTest(PrinterType pType) {
-  printerType = pType;
- }
- public static void main(String[] args) {
-  PrinterType pType = new PrinterType();
-  EnumTest enumTest = new EnumTest(PrinterType.LASER);
- }
-}
+
+  public class EnumTest {
+   PrinterType printerType;
+   enum PrinterType {
+    INKJET,
+    DOTMATRIX,
+    LASER
+   };
+   public EnumTest(PrinterType pType) {
+    printerType = pType;
+   }
+   public static void main(String[] args) {
+    PrinterType pType = new PrinterType();
+    EnumTest enumTest = new EnumTest(PrinterType.LASER);
+   }
+  }
  
 A. prints the output printertype:laser
 B. Compiler error: enums must be declared static
@@ -341,17 +345,17 @@ D.  this program will compile fine, and when run, will crash and throw a runtime
 exception
 
 6. Is the enum definition given below correct?
- 
-public enum PrinterType {
- private int pagePrintCapacity; // #1
- DOTMATRIX(5), INKJET(10), LASER(50); // #2
- private PrinterType(int pagePrintCapacity) {
-  this.pagePrintCapacity = pagePrintCapacity;
- }
- public int getPrintPageCapacity() {
-  return pagePrintCapacity;
- }
-}
+
+  public enum PrinterType {
+   private int pagePrintCapacity; // #1
+   DOTMATRIX(5), INKJET(10), LASER(50); // #2
+   private PrinterType(int pagePrintCapacity) {
+    this.pagePrintCapacity = pagePrintCapacity;
+   }
+   public int getPrintPageCapacity() {
+    return pagePrintCapacity;
+   }
+  }
  
 A. Yes, this enum definition is correct and will compile cleanly without any
 warnings or errors
@@ -361,22 +365,23 @@ Yes, this enum definition is correct but will compile with warnings.
 
 
 7. determine the behavior of this program:
-interface DoNothing {
- default void doNothing() {
-  System.out.println("doNothing");
- }
-}
-@FunctionalInterface
-interface DontDoAnything extends DoNothing {
- @Override
- abstract void doNothing();
-}
-class LambdaTest {
- public static void main(String[] args) {
-  DontDoAnything beIdle = () -> System.out.println("be idle");
-  beIdle.doNothing();
- }
-}
+
+  interface DoNothing {
+   default void doNothing() {
+    System.out.println("doNothing");
+   }
+  }
+  @FunctionalInterface
+  interface DontDoAnything extends DoNothing {
+   @Override
+   abstract void doNothing();
+  }
+  class LambdaTest {
+   public static void main(String[] args) {
+    DontDoAnything beIdle = () -> System.out.println("be idle");
+    beIdle.doNothing();
+   }
+  }
  
  
 A.this program results in a compiler error for dontdoanything interface: cannot
@@ -388,18 +393,18 @@ D.  this program prints: be idle
 
 8. determine the behavior of this program:
  
-public class EnumTest {
- public EnumTest() {
-  System.out.println("In EnumTest constructor ");
- }
- public void printType() {
-  enum PrinterType {
-   DOTMATRIX,
-   INKJET,
-   LASER
+  public class EnumTest {
+   public EnumTest() {
+    System.out.println("In EnumTest constructor ");
+   }
+   public void printType() {
+    enum PrinterType {
+     DOTMATRIX,
+     INKJET,
+     LASER
+    }
+   }
   }
- }
-}
  
 A. this code will compile cleanly without any compiler warnings or errors, and
 when used, will run without any problems
@@ -411,26 +416,26 @@ D.  this code will give compile-time warnings but not any compiler errors
 
 9. determine the behavior of this program:
  
-interface BaseInterface {
- default void foo() {
-  System.out.println("BaseInterface's foo");
- }
-}
-interface DerivedInterface extends BaseInterface {
- default void foo() {
-  System.out.println("DerivedInterface's foo");
- }
-}
-interface AnotherInterface {
- public static void foo() {
-  System.out.println("AnotherInterface's foo");
- }
-}
-public class MultipleInheritance implements DerivedInterface, AnotherInterface {
- public static void main(String[] args) {
-  new MultipleInheritance().foo();
- }
-}
+  interface BaseInterface {
+   default void foo() {
+    System.out.println("BaseInterface's foo");
+   }
+  }
+  interface DerivedInterface extends BaseInterface {
+   default void foo() {
+    System.out.println("DerivedInterface's foo");
+   }
+  }
+  interface AnotherInterface {
+   public static void foo() {
+    System.out.println("AnotherInterface's foo");
+   }
+  }
+  public class MultipleInheritance implements DerivedInterface, AnotherInterface {
+   public static void main(String[] args) {
+    new MultipleInheritance().foo();
+   }
+  }
  
 A.  this program will result in a compiler error: redundant method definition for
 function foo
@@ -442,17 +447,17 @@ D.  the program prints: anotherinterface's foo
 
 10. determine the behavior of this program:
  
-class LambdaFunctionTest {
- @FunctionalInterface
- interface LambdaFunction {
-  int apply(int j);
-  boolean equals(java.lang.Object arg0);
- }
- public static void main(String[] args) {
-  LambdaFunction lambdaFunction = i -> i * i; // #1
-  System.out.println(lambdaFunction.apply(10));
- }
-}
+  class LambdaFunctionTest {
+   @FunctionalInterface
+   interface LambdaFunction {
+    int apply(int j);
+    boolean equals(java.lang.Object arg0);
+   }
+   public static void main(String[] args) {
+    LambdaFunction lambdaFunction = i -> i * i; // #1
+    System.out.println(lambdaFunction.apply(10));
+   }
+  }
  
 A.  this program results in a compiler error: interfaces cannot be defined inside
 classes
@@ -482,15 +487,15 @@ CHAPTER 04
 
 1.Choose the correct option based on this program:
  
-import java.util.*;
-class UtilitiesTest {
- public static void main(String[] args) {
-  List < int > intList = new ArrayList < > ();
-  intList.add(10);
-  intList.add(20);
-  System.out.println("The list is: " + intList);
- }
-}
+  import java.util.*;
+  class UtilitiesTest {
+   public static void main(String[] args) {
+    List < int > intList = new ArrayList < > ();
+    intList.add(10);
+    intList.add(20);
+    System.out.println("The list is: " + intList);
+   }
+  }
  
 A. it prints the following: The list is: [10, 20]
 B. it prints the following: The list is: [20, 10]
