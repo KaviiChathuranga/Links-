@@ -1,9 +1,8 @@
 
 CHAPTER 02
  
-1.
+1. What will be the output of this program?
  
-  What will be the output of this program?
   class Color {
    int red, green, blue;
    void Color() {
@@ -27,9 +26,8 @@ C.Compiles fine, and when run, it prints the following: red: 10 green: 10 blue: 
 D.Compiles fine, and when run, crashes by throwing NullPointerException
 
 
-2.
+2.Consider the following program and predict the behavior of this program:
 
-  Consider the following program and predict the behavior of this program:
   class Base {
    public void print() {
     System.out.println("Base:print");
@@ -50,8 +48,7 @@ C. the program prints the following: Base:print
 D. the program will throw a runtime exception of AbstractClassInstantiationException
 
 
-3.
-Consider the following program
+3.Consider the following program
  
   class Base {}
   class DeriOne extends Base {}
@@ -73,8 +70,7 @@ C.this program throws an ArrayStoreException
 D.this program throws an ArrayIndexOutOfBoundsException
 
 
-4.
-Determine the output of this program:
+4.Determine the output of this program:
 
   class Color {
    int red, green, blue;
