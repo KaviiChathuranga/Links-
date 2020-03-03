@@ -2,6 +2,7 @@ SAMPLE Chapter
 
  
 1. What is the result of the following class? (Choose all that apply)
+ 
 1: public class _C {
 2:  private static int $;
 3:  public static void main(String[] main) {
@@ -60,6 +61,7 @@ G.  The output cannot be determined from the code provided.
  
  
 4.  What is the output of the following program?
+ 
 1: public class FeedingSchedule {
 2:  public static void main(String[] args) {
 3:    boolean keepGoing = true;
@@ -730,6 +732,7 @@ F.  The Rabbit object from line 4 is first eligible for garbage collection immed
 following line 12.
  
 20.What is true about the following code? (Choose all that apply)
+                      
 public class Bear {
  protected void finalize() {
   System.out.println("Roar!");
@@ -834,6 +837,7 @@ F. <=
  
 2.  What data type (or types) will allow the following code snippet to compile? (Choose all that
 apply)
+                      
 byte x = 5;
 byte y = 10;
 _____ z = x + y;
@@ -2219,6 +2223,7 @@ F.  A runtime exception is thrown.
 13:      System.out.println("ok");
 14:  }
 15: }
+                      
 A.  ok
 B. too high
 C. Compiler error on line 7.
