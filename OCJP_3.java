@@ -228,7 +228,41 @@ F. Java takes the name of the .class  file as a parameter.
  
  
  
+11.  What is the result of the following code snippet?
  
+3: int m = 9, n = 1, x = 0;
+4: while(m > n) {
+5:   m--;
+6:   n += 2;
+7:   x += m + n;
+8: }
+9: System.out.println(x);
+A. 11
+B. 13
+C. 23
+D. 36
+E. 50
+F. The code will not compile because of line 7.
+ 
+ 
+12.  What is the result of the following code snippet?
+ 
+3: final char a = 'A', d = 'D';
+4: char grade = 'B';
+5: switch(grade) {
+6:   case a:
+7:   case 'B': System.out.print("great");
+8:   case 'C': System.out.print("good"); break;
+9:   case d:
+10:  case 'F': System.out.print("not good");
+11: }
+ 
+A. great
+B. greatgood
+C.  The code will not compile because of line 3.
+D.  The code will not compile because of line 6.
+E.  The code will not compile because of lines 6 and 9.
+
  
 Answers
 1. A
@@ -241,3 +275,6 @@ Answers
 8. A
 9. B, E.
 10.C, D
+11.  D
+12.  B.
+
