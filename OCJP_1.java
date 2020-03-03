@@ -1720,7 +1720,7 @@ line numbers in main() generate a compiler error?
   3: public class School {
   4:   public static void main(String[] args) {
   5:     System.out.println(Classroom.globalKey);
-  6:     Classroom room = new Classroom(101, ""Mrs. Anderson");
+  6:     Classroom room = new Classroom(101, "Mrs. Anderson");
   7:     System.out.println(room.roomNumber);
   8:     System.out.println(room.floor);
   9:     System.out.println(room.teacherName); } }
@@ -1735,6 +1735,7 @@ E.  Line 8
 F.  Line 9
 
 8.  Which of the following are true? (Choose all that apply)
+                                        
 A.  Encapsulation uses package private instance variables.
 B.  Encapsulation uses private instance variables.
 C.  Encapsulation allows setters.
