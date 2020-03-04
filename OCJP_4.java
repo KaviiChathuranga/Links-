@@ -1028,6 +1028,7 @@ C.class java.lang.Exception
 D. class java.lang.ArrayIndexOutOfBoundsException
  
 3. Consider the following program:
+
 class ExceptionTest {
  public static void foo() {
   try {
@@ -1124,6 +1125,8 @@ D. in the handler of Exception
 
 
 7.Consider the following program:
+
+
 import java.sql.SQLException;
 class CustomSQLException extends SQLException {}
 class BaseClass {
@@ -1237,6 +1240,7 @@ F. does not print any output on console
 
 
 11 .Consider the following program:
+
 import java.io.*;
 class ExceptionTest {
  public static void thrower() throws Exception {
@@ -1253,6 +1257,7 @@ class ExceptionTest {
    System.out.println(throwable);
   }
  }}
+
 When executed, this program prints which one of the following?
  
 A. java.io.ioexception
